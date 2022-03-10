@@ -11,7 +11,7 @@ class Type(models.Model):
     name = models.CharField(max_length=200)
 
     def __str__(self):
-        return 'TypeClass(name=' + str(self.name) + ')'
+        return self.name
 
 
 class Item(models.Model):
@@ -22,12 +22,8 @@ class Item(models.Model):
     available = models.BooleanField(default=True)
     description = models.CharField(max_length=100, blank=True)
 
-    def __str__(self):
-        return 'ItemClass(type=' + str(self.type) + ' ,name=' + str(
-            self.name) + ',price=' \
-               + str(self.price) \
-               + ',stock = ' + str(self.stock) + ',available = ' + str(self.available) + ',description = ' + str(
-            self.description) + ')'
+    def __str__(Item):
+        return Item.name
 
 
 class Client(User):
@@ -44,10 +40,7 @@ class Client(User):
 
     # is_active =
     def __str__(self):
-        return 'ClientClass(shipping_address=' + str(self.shipping_address) + ' ,city=' + str(
-            self.city) + ',interested_in=' \
-               + str(self.interested_in) \
-               + ',phone_number = ' + str(self.phone_number) + ')'
+        return self.first_name + '' + self.last_name
 
 
 class OrderItem(models.Model):
@@ -64,4 +57,4 @@ class OrderItem(models.Model):
                + ',status = ' + str(self.status_options) + ',updatedDate = ' + str(self.updatedDate) + ')'
 
     def total_price(self):
-        return '(total=' + str(self.itemsCount * self.item.price) + ')'
+        return self.itemsCount * self.item.price
