@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+{% if type_of_items %}
+
+    {% if item_list %}
+
+        <ol>
+<h1> Item Type: {{ type_of_items }}</h1>
+            <h3> List of items </h3>
+        {% for item in item_list %}
+    <li> {{ item }} </li>
+    {% endfor %}
+    </ol>
+    {% else %}
+    <strong> None of the items is available! </strong>
+    {% endif %}
+{% endif %}
+
+<p><a href="index.html">About Page</a></p>
+
+</body>
+</html>
