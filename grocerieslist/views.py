@@ -20,7 +20,7 @@ from django.shortcuts import get_object_or_404, get_list_or_404, render
 
 def index(request):
     type_list = Type.objects.all().order_by('id')[:7]
-    type_li = Type.objects.filter(starts)
+
     return render(request, 'myapp1/index.html', {'type_list': type_list})
 
     # This piece of code was done for previous lab
