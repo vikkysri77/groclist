@@ -1,0 +1,48 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#{% if itemlist %}#}
+{#<h1> List of items </h1>#}
+{#<ol>#}
+{##}
+{#	{% for item in itemlist %}#}
+{#    {% if item.available %}#}
+{#        <li><a href={% url "groclist:item_id" %}></a></li>#}
+{#{% endfor %}#}
+{#</ol>#}
+{#{% else %}#}
+{#<strong> None of the items is available! </strong>#}
+{#{% endif %}#}
+{##}
+{#<p><a href="http://127.0.0.1:8000/placeorder/"> </a></p>#}
+{##}
+{#</body>#}
+{#</html>#}
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>List of available items</h1>
+<ul>
+{% for item in itemlist %}
+    {% if item.available %}
+        <li><p><a href="{% url 'groclist:item_id' item_id=item.id %}">{{ item.name }}</a> Quantity: {{ item.stock }}</li></p>
+    {% endif %}
+{% endfor %}
+</ul>
+<p><a href="http://127.0.0.1:8000/placeorder/"> </a></p>
+</body>
+</html>

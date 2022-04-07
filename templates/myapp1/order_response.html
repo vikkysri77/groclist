@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Response</title>
+</head>
+<body>
+{% if msg %}
+<h1>{{ msg }}</h1>
+{% endif %}
+{% if item_Name %}
+    <h3>Item Name - {{ item_Name }}</h3>
+{% endif %}
+{% if item_Interested >= 0%}
+    <h3>Number of people interested in {{ item_Name }} - {{ item_Interested }}</h3>
+{% endif %}
+{% if item_Price %}
+    <h3>Price of {{ item_Name }} - {{ item_Price }}</h3>
+{% endif %}
+
+</body>
+</html>

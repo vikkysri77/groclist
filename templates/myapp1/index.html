@@ -6,8 +6,13 @@
 </head>
 
 <body>
+
+{% extends 'myapp1/base.html' %}
+
+{% block body_block %}
+
 {% if type_list %}
-<h2> List of Types </h2>
+<h1> List of Types </h1>
 <ol>
 
 	{% for type in type_list %}
@@ -20,6 +25,6 @@
 {% endif %}
 
 
-<a href="./about.html">About Page</a>
+{% endblock %}
 </body>
 </html>

@@ -5,10 +5,17 @@
     <title>Title</title>
 </head>
 <body>
+
+{% extends 'myapp1/base.html' %}
+
+{% block body_block %}
+
+
 {% if sampletext %}
 <p>{{ sampletext }}</p>
 {% endif %}
 <p>This is an Online Grocery Store</p>
-<p><a href="./index.html">Index Page</a></p>
+
+{% endblock %}
 </body>
 </html>

@@ -6,7 +6,9 @@
 </head>
 <body>
 
+{% extends 'myapp1/base.html' %}
 
+{% block body_block %}
 
 {% if type_of_items %}
 
@@ -24,7 +26,6 @@
     {% endif %}
 {% endif %}
 
-<p><a href="./about.html">About Page</a></p>
-
+{% endblock %}
 </body>
 </html>

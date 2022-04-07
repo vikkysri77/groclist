@@ -1,0 +1,15 @@
+h1 {
+    background: blueviolet;
+    color:white ;
+	font-size: 25px;
+	font-style: oblique;
+	position: center;
+}
+
+
+
+
+.hbar1 {
+ 			display: inline;
+ 			margin: 15px;
+			}

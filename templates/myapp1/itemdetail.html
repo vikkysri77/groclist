@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Detail</title>
+</head>
+<body>
+{% if item_name %}
+    <h3>Item Name - {{ item_name }}</h3>
+{% endif %}
+{% if item_interested >= 0%}
+    <h3>Number of people interested in {{ item_name }} - {{ item_interested }}</h3>
+{% endif %}
+{% if item_price %}
+    <h3>Price of {{ item_name }} - {{ item_price }}</h3>
+{% endif %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</body>
+</html>
