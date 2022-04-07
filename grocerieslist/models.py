@@ -17,8 +17,8 @@ class Type(models.Model):
 class Item(models.Model):
     type = models.ForeignKey(Type, related_name='items', on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    stock = models.PositiveIntegerField(default=100)
+    price = models.DecimalField(max_digits=10, decimal_places=1)
+    stock = models.PositiveIntegerField(default=600)
     available = models.BooleanField(default=True)
     description = models.CharField(max_length=100, blank=True)
     interested = models.PositiveIntegerField(default=0)

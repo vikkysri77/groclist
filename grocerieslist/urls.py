@@ -7,11 +7,10 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('<int:type_no>/', views.detail, name='detail'),
     path('items/', views.items, name='items'),
-    path('placeorder/', views.placeorder, name='placeorder')
-
+    path('placeorder/', views.placeorder, name='placeorder'),
+    path('items/<int:item_id>/', views.itemdetail, name='item_id')
 
 ]
-
 
 
 
